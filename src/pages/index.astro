@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Users from "../components/Users.astro";
+import Banner from "../components/Banner.astro";
+import CloudMap from "../components/CloudMap.astro";
+import Pricing from "../components/Pricing.astro";
+import "../styles/home.scss"
+
+const res = await fetch('https://dev.montplex.com/engula/home/user_cache_service/number');
+const user_num = res.ok ? await res.json() : {};
+---
+
+<Layout title="Montplex: Serverless Cache for Global Business" footer>
+	<Users users={user_num} />
+	<Banner />
+	<CloudMap />
+	<Pricing />
+</Layout>
+
+

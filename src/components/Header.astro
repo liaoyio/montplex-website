@@ -1,0 +1,157 @@
+---
+import IconRight from "./Icon/Right.astro";
+---
+
+<header class="z-50 w-full">
+	<div class="relative bg-ly-mian home-nav">
+		<div class="navbar-pc">
+			<div class="nav-box">
+				<a href="/" class="logo">
+					<span class="sr-only">MontPlex</span>
+					<img src="/montplex.svg" alt="Montplex" class="!h-9" />
+				</a>
+				<div class="check-menu md:hidden" id="toggle-nav">
+					<button  type="button">
+						<span class="sr-only">Close menu</span>
+						<svg
+							id="nav-menu"
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							aria-hidden="false"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M4 6h16M4 12h16M4 18h16"></path>
+						</svg>
+
+						<svg
+							id="nav-close"
+							class="hidden"
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							aria-hidden="true"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M6 18L18 6M6 6l12 12"></path>
+						</svg>
+					</button>
+				</div>
+				<nav class="nav-group">
+					<a href="/#bander-pricing" class="group nav-link" id="nav-pricing">
+						<span>Pricing</span>
+					</a>
+					<a
+						href="https://dev.montplex.com/docs/docs/overall/create"
+						target="_blank"
+						class="group nav-link"
+					>
+						<span>Docs</span>
+					</a>
+
+					<a href="/about" class="group nav-link">
+						<span>About</span>
+					</a>
+
+					<a href="/careers" class="group nav-link">
+						<span>Careers</span>
+					</a>
+
+					<a
+						href="https://dev.montplex.com/docs/docs/contact"
+						target="_blank"
+						class="group nav-link"
+					>
+						<span>Contact Us</span>
+					</a>
+				</nav>
+				<div class="conlose">
+					<div class="cos-btn-home">
+						<div class="button-space items-center" id="to_console_md">
+							<div class="text-block !text-lg">Console</div>
+							<IconRight />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="navbar-mb bg-[#050505] hidden" id="nav-mb">
+			<div class="nav-mb-box">
+				<div class="nav-list duration-200 ease-out">
+					<nav class="flex flex-col">
+						<a href="/#bander-pricing" class="group nav-link" >
+							<span>Pricing</span>
+						</a>
+
+						<a
+							href="https://dev.montplex.com/docs/docs/overall/create"
+							target="_blank"
+							class="group nav-link"
+						>
+							<span>Docs</span>
+						</a>
+
+						<a href="/about" class="group nav-link">
+							<span>About</span>
+						</a>
+
+						<a href="/careers" class="group nav-link">
+							<span>Careers</span>
+						</a>
+
+						<a
+							href="https://dev.montplex.com/docs/docs/contact"
+							target="_blank"
+							class="group nav-link"
+						>
+							<span>Contact Us</span>
+						</a>
+					</nav>
+					<div class="cos-btn-home">
+						<div class="button-space items-center justify-center" id="to_console_sm">
+							<div class="text-block">Console</div>
+							<IconRight class="!h-5 !w-5" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<script>
+import { handleConsole } from "../init";
+
+	const menu = document.getElementById("nav-menu");
+	const close = document.getElementById("nav-close");
+	const navbar = document.getElementById("nav-mb");
+	const toggle_nav = document.getElementById("toggle-nav")
+
+	toggle_nav?.addEventListener("click", () => {
+		menu!.style.display = menu!.style.display === "none" ? "block" : "none"
+		close!.style.display = menu!.style.display === "none" ? "block" : "none"
+		navbar!.style.display = menu!.style.display === "block" ? "none" : "block"
+	});
+
+	window.addEventListener('resize', ()=> {  
+  const screenWidth = window.innerWidth;
+	if(screenWidth > 1000 && navbar?.style.display === "block"){
+		navbar!.style.display =  "none"
+	}
+})
+
+const to_console_md = document.getElementById("to_console_md")
+const to_console_sm = document.getElementById("to_console_sm")
+
+to_console_md?.addEventListener("click", () => handleConsole());
+to_console_sm?.addEventListener("click", () => handleConsole());
+
+</script>

@@ -1,0 +1,35 @@
+---
+import CuttingLine from "./Icon/CuttingLine.astro";
+import PricingChild from "./PricingChild.astro";
+---
+
+<section class="ly-box !pb-0" id="bander-pricing">
+  <div class="top-rect"></div>
+  <div class="content">
+
+    <div class="flex flex-col justify-center items-center">
+      <h3 class="text-block text-4xl md:text-6xl font-bold"
+      style="line-height: 1.5;">Plans & Pricing</h3>
+      <p class="mt-2 mb-3">
+        <span class="inline-block text-xl text-white"> Pay only for what you use</span>
+      </p>
+      <CuttingLine />
+    </div>
+    <PricingChild />
+    <div class="flex items-center flex-col text-white mb-28 mt-20">
+      <p>
+        See
+        <a
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center text-[#41a5f8] cursor-pointer hover:underline"
+          href="https://dev.montplex.com/docs/docs/overall/Pricing"
+        >
+          Limits
+        </a>
+        for more information.
+      </p>
+    </div>
+  </div>
+</section>
+
