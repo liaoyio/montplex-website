@@ -1,16 +1,21 @@
-# Astro Starter Kit: Basics
+# 🎉 Montplex website
 
 ```
-npm create astro@latest -- --template basics
+# init project
+pnpm i
+
+# start dev server
+pnpm run dev
+
+# build
+pnpm run build
+
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+> 🧑‍🚀
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+![basics](/public/og-home.png)
 
 
 ## 🚀 Project Structure
@@ -52,4 +57,4 @@ All commands are run from the root of the project, from a terminal:
 
 ## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Feel free to check [our documentation](https://docs.astro.build)
