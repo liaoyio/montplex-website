@@ -22,7 +22,7 @@ const props = Astro.props;
 		<meta name="generator" content="Montplex: Serverless Cache for Global Business" />
 		<title>{props.title}</title>
 		<meta name="keywords" content="redis,serverless cache,global database,serverless ">
-		<meta property="og:title" content={ props?.property ?? ''}>
+		<meta property="og:title" content={ props?.property ?? props.title }>
 		<meta property="og:description" content="Help us build the cutting edge data platform for the serverless era.">
 		<meta property="og:url" content="https://www.montplex.com/">
 		<meta property="og:site_name" content={ props?.property ?? props.title}>
