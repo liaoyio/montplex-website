@@ -10,6 +10,7 @@ const res = await fetch('https://dev.montplex.com/engula/home/user_cache_service
 const user_num = res.ok ? await res.json() : {};
 ---
 
+
 <Layout title="Montplex: Serverless Cache for Global Business" footer>
 	<Users users={user_num} />
 	<Banner />
