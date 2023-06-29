@@ -16,27 +16,27 @@ const props = Astro.props;
 <html lang="en" data-theme="dark">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Help us build the cutting edge data platform for the serverless era." />
-		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<link rel="Montplex" href="/favicon.ico" type="image/x-icon">
-		<meta name="generator" content="Montplex: Serverless Cache for Global Business" />
 		<title>{props.title}</title>
-		<meta name="keywords" content="redis,serverless cache,global database,serverless ">
-		<meta property="og:title" content={ props?.property ?? props.title }>
-		<meta property="og:description" content="Help us build the cutting edge data platform for the serverless era.">
-		<meta property="og:url" content="https://www.montplex.com/">
-		<meta property="og:site_name" content={ props?.property ?? props.title}>
+		<link href="/favicon.ico" type="image/x-icon" />
+		<link rel="canonical" href="https://www.montplex.com" />
+
+		<meta name="generator" content="Montplex: Serverless Cache for Global Business" />
+		<meta name="keywords" content="redis,serverless cache,global database,serverless" />
+		<meta name="description" content="Help us build the cutting edge data platform for the serverless era." />
+		<meta property="og:description" content="Help us build the cutting edge data platform for the serverless era." />
+		<meta property="og:title" content={ props.property ||  props.title || 'Montplex: Serverless Cache for Global Business' } />
 		<meta property="og:image" content="https://www.montplex.com/og-home.png">
-		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://www.montplex.com">
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content={ props.property ? props.property : props.title } />
 
-		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:site" content="@MontplexDB">
-		<meta name="twitter:creator" content="@MontplexDB">
-		<meta name="twitter:title" content={ props?.property ?? props.title}>
-		<meta name="twitter:description" content="Help us build the cutting edge data platform for the serverless era.">
-		<meta name="twitter:image" content="https://www.montplex.com/og-home.png">
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@MontplexDB" />
+		<meta name="twitter:creator" content="@MontplexDB" />
+		<meta name="twitter:title" content={ props.property || props.title } />
+		<meta name="twitter:description" content="Help us build the cutting edge data platform for the serverless era." />
+		<meta name="twitter:image" content="https://www.montplex.com/og-home.png" />
 
-		<meta property="og:locale" content="en_US">
 	</head>
 	<body>
 		<Header />
