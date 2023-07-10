@@ -4,18 +4,27 @@ import Users from "../components/Users.astro";
 import Banner from "../components/Banner.astro";
 import CloudMap from "../components/CloudMap.astro";
 import Pricing from "../components/Pricing.astro";
-import "../styles/home.scss"
+import "../styles/home.scss";
 
-const res = await fetch('https://dev.montplex.com/engula/home/user_cache_service/number');
+const res = await fetch("https://dev.montplex.com/engula/home/user_cache_service/number");
 const user_num = res.ok ? await res.json() : {};
 ---
 
+<title>Montplex: Serverless Cache for Global Business</title>
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@MontplexDB" />
+<meta name="twitter:creator" content="@MontplexDB" />
+<meta name="twitter:title" content="Montplex: Serverless Cache for Global Business" />
+<meta
+	name="twitter:description"
+	content="Help us build the cutting edge data platform for the serverless era."
+/>
+<meta name="twitter:image" content="https://www.montplex.com/og-home.png" />
+<meta name="twitter:image:src" content="https://www.montplex.com/og-home.png" />
 
-<Layout title="Montplex: Serverless Cache for Global Business" footer>
+<Layout footer>
 	<Users users={user_num} />
 	<Banner />
 	<CloudMap />
 	<Pricing />
 </Layout>
-
-
